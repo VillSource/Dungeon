@@ -3,5 +3,38 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "dungeon": {
+      "projectType": "library",
+      "root": "projects/dungeon",
+      "sourceRoot": "projects/dungeon/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/dungeon/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/dungeon/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/dungeon/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/dungeon/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
   }
 }
