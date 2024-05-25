@@ -2,6 +2,17 @@
 <hr>
 
 content
-<lib-dungeon></lib-dungeon>
+
+<label for="cars">Choose a file:</label>
+
+<select name="cars" id="cars" #file (change)="onSelected(file.value)">
+  @for (item of tree; track $index) {
+  <option value="{{item}}">{{item}}</option>
+  }
+</select>
+
+<hr>
+<h5> {{file.value}} </h5>
+<p>{{content}}</p>
 
 <router-outlet />
