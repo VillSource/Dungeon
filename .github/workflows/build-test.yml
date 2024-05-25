@@ -26,4 +26,4 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Test
-      run: npm test --code-coverage
+      run: npm run ci
