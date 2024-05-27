@@ -40,7 +40,7 @@ jobs:
       - name: Build dungeon
         run: npm run build:dungeon
       - name: Build example
-        run: npm run ng build example --base-href /Dungeon/
+        run: npm run ng build --base-href "/Dungeon/" example
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
