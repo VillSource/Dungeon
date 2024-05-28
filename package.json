@@ -12,7 +12,7 @@
     "build:dungeon": "ng build dungeon",
     "test:dungeon": "npm test dungeon -- --code-coverage --watch=false --browsers=ChromeHeadless",
     "watch:dungeon": "ng build dungeon --watch",
-    "gh-pages": "ng build --base-href /Dungeon/ example"
+    "gh-pages": "ng build --base-href /Dungeon/ example && node GH-PAGES.js"
   },
   "private": true,
   "dependencies": {
