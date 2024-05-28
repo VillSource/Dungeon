@@ -11,7 +11,8 @@
     "watch": "npm run watch:dungeon",
     "build:dungeon": "ng build dungeon",
     "test:dungeon": "npm test dungeon -- --code-coverage --watch=false --browsers=ChromeHeadless",
-    "watch:dungeon": "ng build dungeon --watch"
+    "watch:dungeon": "ng build dungeon --watch",
+    "gh-pages": "ng build --base-href /Dungeon/ example"
   },
   "private": true,
   "dependencies": {
