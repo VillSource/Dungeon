@@ -1,0 +1,22 @@
+<p>content works!</p>
+
+@for (block of content; track $index) {
+  <p>{{block.type}}</p>
+  @switch (block.type) {
+    @case ("header") {
+      <h2>{{block.data}}</h2>
+    }
+    @case ("description") {
+      <span>{{block.data}}</span>
+    }
+    @case ("paragraph") {
+      <span>{{block.data}}</span>
+    }
+    @case ("separator") {
+      <hr>
+    }
+    @case ("media") {
+      <img alt="{{block.alt}}" src="{{block.src}}">
+    }
+  }
+}
